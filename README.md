@@ -18,4 +18,4 @@
 
 ## Vídeo Demostrativo
 
-[![](https://markdown-videos.deta.dev/youtube/dRbhjeT42gDOKnOr)](https://youtu.be/FxaiJq-n_NY?si=dRbhjeT42gDOKnOr)
+https://img.youtube.com/vi/<dRbhjeT42gDOKnOr>/default.jpg  
