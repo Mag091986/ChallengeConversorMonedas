@@ -1,6 +1,6 @@
 ## Conversor de monedas Challenge Alura One
 
-    1. [Hacer conversión de moneda](#hacer-conversion-de-moneda).
+    1. [Hacer conversión de moneda].
     2. Ver listado actual de monedas.
     3. Agregar una moneda al listado.
     4. Eliminar una moneda del listado.
