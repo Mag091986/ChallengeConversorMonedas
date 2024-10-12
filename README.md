@@ -15,3 +15,7 @@
     4. CLP: Peso chileno.
     5. COP: Peso colombiano.
     6. USD: Dolar estadounidense
+
+## Vídeo Demostrativo
+
+[![](https://markdown-videos.deta.dev/youtube/dRbhjeT42gDOKnOr)](https://youtu.be/FxaiJq-n_NY?si=dRbhjeT42gDOKnOr)
