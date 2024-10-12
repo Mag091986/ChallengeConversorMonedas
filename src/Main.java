@@ -16,7 +16,7 @@ public class Main {
             System.out.println("¡Bienvenido(a) al conversor moneda!");
             while (app.getOption() != 7) {
                 System.out.println(options);
-                System.out.println("Seleccione una moneda: ");
+                System.out.println("Seleccione una opción: ");
                 app.setOption(userInput.nextInt());
                 switch (app.getOption()) {
                     case 1:

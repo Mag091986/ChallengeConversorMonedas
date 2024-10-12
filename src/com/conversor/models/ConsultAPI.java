@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ConsultAPI extends HttpJsonResponse {
-    private String url = "https://v6.exchangerate-api.com/v6/" + System.getenv("2dc036f2f0fd48db65cbf176");
+    private final String url = "https://v6.exchangerate-api.com/v6/" + System.getenv("EXCHANGE-API-KEY");
 
     public void exchangeCurrencyPair(CurrencyPairConversion currencyPairConversion) {
         String pairBaseCode = currencyPairConversion.getBaseCode();
@@ -20,7 +20,6 @@ public class ConsultAPI extends HttpJsonResponse {
         URI apiUrl = URI.create(url + "/pair/" + pairBaseCode + "/" + pairTargetCode + "/" + pairAmount);
 
         try {
-            // metodo de clase madre
             JsonObject jsonObject = getJsonResponseFromApi(apiUrl);
 
             double amountConverted = jsonObject.get("conversion_result").getAsDouble();
@@ -28,7 +27,7 @@ public class ConsultAPI extends HttpJsonResponse {
             currencyPairConversion.setAmountConverted(amountConverted);
             currencyPairConversion.setCreatedAt(LocalDateTime.now().toString());
         } catch (Exception e) {
-            throw new RuntimeException("Erro al convertir la moneda.");
+            throw new RuntimeException("Error al convertir la moneda.");
         }
     }
 
@@ -36,7 +35,6 @@ public class ConsultAPI extends HttpJsonResponse {
         URI apiUrl = URI.create(url + "/codes");
         List<Country> apiCountries = new ArrayList<>();
         try {
-            // metodo de clase madre
             JsonObject jsonObject = getJsonResponseFromApi(apiUrl);
 
             JsonArray jsonArray = jsonObject.getAsJsonArray("supported_codes");
@@ -48,7 +46,7 @@ public class ConsultAPI extends HttpJsonResponse {
             }
             return apiCountries;
         } catch (Exception e) {
-            throw new RuntimeException("Paise no encontrados.");
+            throw new RuntimeException("Países no encontrados.");
         }
     }
 }
